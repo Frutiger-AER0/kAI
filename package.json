@@ -1,0 +1,18 @@
+{
+  "name": "kai",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Anemoia",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch --env-file=.env server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.1.41",
+    "@langchain/openai": "^1.4.4",
+    "express": "^5.2.1"
+  }
+}
