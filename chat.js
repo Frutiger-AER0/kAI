@@ -35,3 +35,18 @@ export async function sendPrompt(prompt) {
         usage_metadata: result.usage_metadata,
     };
 }
+
+if (process.argv[1] && process.argv[1].endsWith("chat.js")) {
+    const prompt = process.argv.slice(2).join(" ") || "Say hello in Markdown.";
+    sendPrompt(prompt)
+        .then((result) => {
+            console.log("\nAI reply:\n");
+            console.log(result.reply);
+            console.log("\nUsage metadata:\n");
+            console.log(result.usage_metadata);
+        })
+        .catch((error) => {
+            console.error("Test prompt failed:", error);
+            process.exitCode = 1;
+        });
+}

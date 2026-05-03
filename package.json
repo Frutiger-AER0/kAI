@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node --watch --env-file=.env server.js",
+    "test:chat": "node --env-file=.env chat.js \"Say hello in Markdown and keep it short.\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
